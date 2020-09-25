@@ -6,7 +6,12 @@ Pandas dataframe uses .groupby() object for reduce calculations.  For example, g
 ## Sample Dataframe: 
 ![Sample Dataframe](df_sample.png)
 
-A simple `.groupby('UnderlyingSymbol')['Ask'].min()` calculation would provide a list of the lowest asking prices per symbol.  But in many cases, we are still interested in seeing the other columns as well.  Similar to a filtering operation in combination with groupby operation.  Use combination of `.groupby()`, `.transform()`, and boolean mask.  
+A simple `.groupby('UnderlyingSymbol')['Ask'].min()` calculation would provide a list of the lowest asking prices per symbol.  
+
+## Sample Groupby: 
+![Sample Groupby](df_groupby.png)
+
+But in many cases, we are still interested in seeing the other columns as well.  Similar to a filtering operation in combination with groupby operation.  Use combination of `.groupby()`, `.transform()`, and boolean mask.  
 
 ## Sample Groupby Filter: 
 ![Sample Groupby Filter](df_gb_filter.png)
