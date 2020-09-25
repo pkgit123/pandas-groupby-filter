@@ -13,6 +13,12 @@ A simple `.groupby('UnderlyingSymbol')['Ask'].min()` calculation would provide a
 
 But in many cases, we are still interested in seeing the other columns as well.  Similar to a filtering operation in combination with groupby operation.  Use combination of `.groupby()`, `.transform()`, and boolean mask.  
 
+```python
+# groupby filter: find minimum 'Ask' per 'UnderlyingSymbol'
+mask_gb_filter = df_sample.groupby(['UnderlyingSymbol'])['Ask'].transform(min) == df_sample['Ask']
+df_gb_filter = df_sample.loc[mask_gb_filter]
+```
+
 ## Sample Groupby Filter: 
 ![Sample Groupby Filter](df_gb_filter.png)
 
